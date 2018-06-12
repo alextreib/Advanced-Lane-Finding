@@ -47,20 +47,20 @@ I start by preparing "object points", which will be the (x, y, z) coordinates of
 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function.  I applied this distortion correction to the test image using the `cv2.undistort()` function and obtained this result: 
 
-![Distortion Chessboard](doc/1_distortion_chessboard.jpg)
+![Distortion Chessboard](doc/1_distortion_chessboard.JPG)
 
 ### Pipeline (single images)
 
 #### 1. Provide an example of a distortion-corrected image.
 
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text](doc/2_distortion_road.jpg)
+![alt text](doc/2_distortion_road.JPG)
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at code cell 13 in Ipython).  Here's an example of my output for this step.
 
-![alt text](doc/4_thresholding.jpg)
+![alt text](doc/4_thresholding.JPG)
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
@@ -86,7 +86,7 @@ dst = np.float32([(lanewidth,0),
 
 I verified that my perspective transform was working as expected by analysing the output of every test_images. Here you can see an example of the test3.jpg:
 
-![alt text](doc/3_birdseye.jpg)
+![alt text](doc/3_birdseye.JPG)
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
@@ -120,7 +120,7 @@ Moreover, the curvature and distance are put into the picture.
 
 Here is an example of my result on a test image:
 
-![alt text](doc/6_example_output.jpg)
+![alt text](doc/6_example_output.JPG)
 
 ---
 
